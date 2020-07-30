@@ -1,21 +1,32 @@
 import React from 'react';
-import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
-
-// a sintaxe "to" substitui o href
+import PageDefault from '../../../components/PageDefault';
 
 function CadastroCategoria() {
-    return (
-        <PageDefault>
-            <h1>Página de Cadastro de Categoria</h1>
+  return (
+    <PageDefault>
+      <h1>Cadastro de Categoria</h1>
 
+      <form>
 
+        <label>
+          Nome da Categoria:
+          <input
+            type="text"
+          />
+        </label>
 
-            <Link to="/">
-                ir para home
-            </Link>
-        </PageDefault>
-    );
+        <button>
+          Cadastrar
+        </button>
+
+      </form>
+
+      <Link to="/">
+        Ir para home
+      </Link>
+    </PageDefault>
+  )
 }
 
 export default CadastroCategoria;
