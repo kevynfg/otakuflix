@@ -22,12 +22,9 @@ function setValue (chave, valor) {
 }
 
 function handleChange(recebeEvento){
-  const {getAttribute, value} = recebeEvento.target;
-  setValue (
-    //agora o value recebo o valor do campo nome, e coloca em nome
-    //utilizando o elemento "name" do input
-    getAttribute('name'),
-    value
+    setValue(
+      recebeEvento.target.getAttribute('name'),
+      recebeEvento.target.value
     );
 }
 
